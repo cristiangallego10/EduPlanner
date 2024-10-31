@@ -1,8 +1,9 @@
 <template>
-    <h1>Agenda</h1>
-    <Calendar />
-    <Meses />
-    <Card />
-    <MenuMeses />
-    
+    <div>
+        <h1>Agenda</h1>
+        <Meses />
+        <Calendar />
+        <Card />
+        <MenuMeses />
+    </div>
 </template>
