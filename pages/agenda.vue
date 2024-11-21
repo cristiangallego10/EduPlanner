@@ -3,8 +3,8 @@
         <h1>Agenda</h1>
         <Meses />
         <Calendar />
-        <Card />
-        <MenuMeses />
+        <!--Card />
+        <MenuMeses /-->
         
     </div>
 </template>
