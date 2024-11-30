@@ -6,11 +6,11 @@
 </template>
 <script setup>
   // Instanciar el store
-  const productStore = useProductStore()
+  const eventStore = useEventStore()
   
 
-  await useAsyncData('products', async () => {
-    await productStore.fetchProducts()    
+  await useAsyncData('events', async () => {
+    await eventStore.fetchEvents()    
   })
   
 </script>

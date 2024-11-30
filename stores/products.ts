@@ -3,11 +3,11 @@ import { defineStore } from "pinia";
 interface Event {
   id: number;
   title: string;
-  price: number;
+  date: string;
   description: string;
 }
 
-export const useProductStore = defineStore({
+export const useEventStore = defineStore({
   id: "events",
   state: () => ({
     events: [] as Event[],
@@ -15,6 +15,7 @@ export const useProductStore = defineStore({
   }),
   persist: {
     storage: persistedState.localStorage,
+    
   },
   getters: {
     getevents: (state) => state.events,
@@ -24,10 +25,18 @@ export const useProductStore = defineStore({
     async fetchEvents() {
       try {
         const events = await $fetch("/api/events");
+        console.log("Eventos cargados:", events); // Verifica si los eventos se cargan correctamente
         this.events = events;
       } catch (error) {
         console.error("Error fetching events:", error);
       }
+    /*async fetchEvents() {
+      try {
+        const events = await $fetch("/api/events");
+        this.events = events;
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }*/
     },
   },
 });

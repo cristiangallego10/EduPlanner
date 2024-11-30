@@ -29,8 +29,14 @@ export default defineEventHandler(async (event) => {
             title: 'Clase de Cocina Italiana',
             date: '2023-12-20',
             description: 'Aprende a cocinar auténticos platos italianos de la mano de un chef experimentado.',
-        },
-        {
+        }
+
+    ];
+
+        return events;
+    });
+    
+        /*{
             id: 6,
             title: 'Seminario de Marketing Digital',
             date: '2023-12-22',
@@ -60,7 +66,5 @@ export default defineEventHandler(async (event) => {
             date: '2024-01-05',
             description: 'Una charla sobre el impacto de la inteligencia artificial en el mundo actual.',
         },
-    ];
-
-    return events;
-});
+   
+ */

@@ -52,7 +52,7 @@
   onMounted: ()=>{
     const adapter = useDate();
     // Llama a la acción fetchEvents para obtener eventos desde la API
-    this.productStore.fetchEvents();
+    this.eventStore.fetchEvents();
     this.getEvents({
       start: adapter.startOfDay(adapter.startOfMonth(new Date())),
       end: adapter.endOfDay(adapter.endOfMonth(new Date())),
@@ -61,13 +61,13 @@
 
   const getEvents = ({ start, end }) =>{
       // Verifica si hay eventos en el store
-      if (this.productStore.events.length === 0) {
+      if (this.eventStore.events.length === 0) {
         console.warn("No hay eventos disponibles.");
       }
     };
   
     // Accede al store de eventos
-    const productStore = useProductStore();
+    const eventStore = useEventStore();
   
 
 </script>

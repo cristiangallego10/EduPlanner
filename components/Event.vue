@@ -14,9 +14,9 @@
 </template>
 <script setup>
     // Instanciar el store
-  const eventStore = useProductStore()
+  const eventStore = useEventStore()
   
   // Obtener los productos
-  const { getProducts } = productStore;
+  const { getEvents } = eventStore;
 
 </script>
